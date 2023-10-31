@@ -93,30 +93,24 @@ endmodule
 ```
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
-![https://github.com/KoduruSanathKumarReddy/Exp-7-Synchornous-counters-/blob/main/upcounter.png](upcounter.png)
-![](downcounter.png)
-
-
-
-
+![image](https://github.com/Pavan-Gv/Exp-7-Synchornous-counters-/assets/94827772/3ca061e3-dbae-4ddd-8501-9e1bdfa29fed)
+![image](https://github.com/Pavan-Gv/Exp-7-Synchornous-counters-/assets/94827772/ec0fc156-360e-4270-aae4-12b168bc4c7b)
 
 
 
 
 ### TIMING DIGRAMS FOR COUNTER  
 ## Up Counter
-![](timingup.png)
+![image](https://github.com/Pavan-Gv/Exp-7-Synchornous-counters-/assets/94827772/d87adbea-ef48-4a7a-a7e3-7a6aa91e90f1)
+
 ## Down Counter
-![](timingdown.jpeg)
-
-
+![image](https://github.com/Pavan-Gv/Exp-7-Synchornous-counters-/assets/94827772/387da5a6-d021-46c3-bd56-07fa7170ffdc)
 
 
 
 ### TRUTH TABLE 
-![](truthup.png)
-![](truthdown.png)
-
+![image](https://github.com/Pavan-Gv/Exp-7-Synchornous-counters-/assets/94827772/1e1961c2-ad8a-48ce-a7d0-9d7c7a6c7aa7)
+![image](https://github.com/Pavan-Gv/Exp-7-Synchornous-counters-/assets/94827772/b2a6e052-d88e-4e42-832f-ce79e480c70d)
 
 
 
