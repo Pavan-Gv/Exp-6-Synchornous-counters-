@@ -63,54 +63,77 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 Developed by: G Venkaata Pavan Kumar
 RegisterNumber:  212221240013
 ```
-## 4bit up counter
+
+### UPcounter:
 ```
-module uc(input CLK, input reset,output[0:3]counter);
-reg[0:3]counter_up;
-always@(posedge CLK or posedge reset)
+module upcounters(clk,A);
+output reg [3:0]A;
+input clk;
+always @(posedge clk)
 begin
-if(reset)
-counter_up <=4'd0;
-else
-counter_up <=counter_up+4'd1;
+	A[3]=(((A[0])&(A[1])&(A[2]))^A[3]);
+	A[2]=(((A[0])&(A[1]))^A[2]);
+	A[1]=(A[0])^A[1];
+	A[0]=A[0]^1;
 end
-assign counter = counter_up;
 endmodule
 ```
-## 4bit down counter
+### Downcounter:
 ```
-module dc(input CLK,input reset, output[0:3]counter);
-reg[0:3]counter_down;
-always@(posedge CLK or posedge reset)
+module downcounter(A,clk);
+output reg [3:0]A;
+input clk;
+always@(posedge clk)
 begin
-if(reset)
-counter_down <= 4'd0;
-else
-counter_down<=counter_down-4'd1;
+A[3]=((((~A[2])&(~A[1]))&(~A[0]))^A[3]);
+A[2]=(((~A[1])&(~A[0]))^A[2]);
+A[1]=((~A[0])^A[1]);
+A[0]=1^A[0];
 end
-assign counter = counter_down;
 endmodule
 ```
+
+
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
-![image](https://github.com/Pavan-Gv/Exp-7-Synchornous-counters-/assets/94827772/3ca061e3-dbae-4ddd-8501-9e1bdfa29fed)
-![image](https://github.com/Pavan-Gv/Exp-7-Synchornous-counters-/assets/94827772/ec0fc156-360e-4270-aae4-12b168bc4c7b)
 
+
+
+### Upcounter RTL:
+
+![image](https://github.com/SOMEASVAR/Exp-7-Synchornous-counters-/assets/93434149/1f75391e-efbe-478c-8293-a3f2652a6ec2)
+
+### Downcounter RTL:
+
+
+
+![image](https://github.com/SOMEASVAR/Exp-7-Synchornous-counters-/assets/93434149/1a0e2889-1487-43cd-9722-3d4ae7cf0925)
 
 
 
 ### TIMING DIGRAMS FOR COUNTER  
-## Up Counter
-![image](https://github.com/Pavan-Gv/Exp-7-Synchornous-counters-/assets/94827772/d87adbea-ef48-4a7a-a7e3-7a6aa91e90f1)
 
-## Down Counter
-![image](https://github.com/Pavan-Gv/Exp-7-Synchornous-counters-/assets/94827772/387da5a6-d021-46c3-bd56-07fa7170ffdc)
+### Upcounter Waveform:
+![image](https://github.com/SOMEASVAR/Exp-7-Synchornous-counters-/assets/93434149/efc32b5a-baba-4a23-b0f2-324cf19c8865)
 
+
+### Downcounter Waveform:
+
+
+![image](https://github.com/SOMEASVAR/Exp-7-Synchornous-counters-/assets/93434149/99a4cdf4-449b-4d5a-a78f-802e070b2f2a)
 
 
 ### TRUTH TABLE 
-![image](https://github.com/Pavan-Gv/Exp-7-Synchornous-counters-/assets/94827772/1e1961c2-ad8a-48ce-a7d0-9d7c7a6c7aa7)
-![image](https://github.com/Pavan-Gv/Exp-7-Synchornous-counters-/assets/94827772/b2a6e052-d88e-4e42-832f-ce79e480c70d)
+### Upcounter Truthtable:
+
+![image](https://github.com/SOMEASVAR/Exp-7-Synchornous-counters-/assets/93434149/d0edca7f-bced-48af-a8ad-d7d40500ce53)
+
+### Downcounter Truthtable:
+
+![image](https://github.com/SOMEASVAR/Exp-7-Synchornous-counters-/assets/93434149/45f855bb-4143-4c27-a7a3-3a0c30bd0810)
+
+
+
 
 
 
